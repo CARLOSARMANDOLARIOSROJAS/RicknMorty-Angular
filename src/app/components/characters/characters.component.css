@@ -1,0 +1,26 @@
+/* Clase personalizada para 5 cards por fila */
+.col-5-per-row {
+  flex: 0 0 auto;
+  width: 20%; /* 100% / 5 = 20% */
+}
+
+/* Responsive: en pantallas medianas, 3 por fila */
+@media (max-width: 991.98px) {
+  .col-5-per-row {
+    width: 33.333333%; /* 100% / 3 = 33.33% */
+  }
+}
+
+/* Responsive: en pantallas pequeñas, 2 por fila */
+@media (max-width: 767.98px) {
+  .col-5-per-row {
+    width: 50%; /* 100% / 2 = 50% */
+  }
+}
+
+/* Responsive: en pantallas muy pequeñas, 1 por fila */
+@media (max-width: 575.98px) {
+  .col-5-per-row {
+    width: 100%;
+  }
+}

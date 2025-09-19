@@ -1,0 +1,27 @@
+<div class="container py-4">
+    <!-- Estado de carga -->
+    <div *ngIf="isLoading" class="text-center py-5">
+        <div class="spinner-border text-primary" role="status">
+            <span class="visually-hidden">Cargando...</span>
+        </div>
+        <p class="mt-2">Cargando personajes...</p>
+    </div>
+
+    <!-- Mensaje de error -->
+    <div *ngIf="errorMessage && !isLoading" class="alert alert-warning text-center" role="alert">
+        {{ errorMessage }}
+    </div>
+
+    <!-- Lista de personajes -->
+    <div *ngIf="!isLoading && !errorMessage" class="row g-4">
+        <div class="col-5-per-row" *ngFor="let char of characters">
+            <app-character-card [character]="char"></app-character-card>
+        </div>
+    </div>
+
+    <!-- Mensaje cuando no hay personajes -->
+    <div *ngIf="!isLoading && characters.length === 0 && !errorMessage" class="text-center py-5">
+        <h4>No se encontraron personajes</h4>
+        <p class="text-muted">Intenta con otro término de búsqueda</p>
+    </div>
+</div>

@@ -1,0 +1,12 @@
+<div class="card shadow-sm border-0 rounded-3">
+    <img [src]="character.image" class="card-img-top" alt="{{ character.name }}">
+    <div class="card-body">
+        <h5 class="card-title">{{ character.name }}</h5>
+        <p class="card-text">Status: {{ character.status }}</p>
+        <div class="d-flex justify-content-between align-items-center">
+            <p class="card-text">Species: {{ character.species }}</p>
+            <i class="far fa-heart text-muted" aria-hidden="true" (click)="toggleFavorite()" *ngIf="!isFavorite"></i>
+            <i class="fas fa-heart text-danger" aria-hidden="true" *ngIf="isFavorite" (click)="toggleFavorite()"></i>
+        </div>
+    </div>
+</div>
