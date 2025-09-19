@@ -31,7 +31,7 @@ docker build -t ricknmorty-angular .
 
 ### 3. Levantar el contenedor
 ```bash
-docker run -p 8080:80 angular-rickandmorty
+docker run -p 8080:80 ricknmorty-angular
 ```
 
 ### 4. Visitar navegador
